@@ -1154,18 +1154,77 @@ a:hover {
 
 
 /* --- Resume Section --- */
-.resume-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 50px;
+/* ---- Resume Section ---- */
+.resume-section {
+  background-color: #0b0c10;
+  padding: 80px 20px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 
-.resume-buttons .btn {
-    min-width: 200px;
-    text-align: center;
+.resume-section .section-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #66fcf1;
+  text-shadow: 0 0 12px #66fcf1;
 }
+
+.resume-viewer {
+  width: 100%;
+  height: 80vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px #45a29e88;
+  border: 2px solid #45a29e;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.resume-viewer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Glowing download button */
+.resume-download {
+  margin-top: 30px;
+}
+
+.glow-button {
+  display: inline-block;
+  background-color: #1f2833;
+  color: #66fcf1;
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #45a29e;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 0 12px #45a29e99;
+  transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 20px #66fcf1cc, 0 0 40px #66fcf1cc;
+  transform: scale(1.05);
+  background-color: #0b0c10;
+  color: #ffffff;
+}
+
+/* Responsive iframe container */
+@media (max-width: 768px) {
+  .resume-viewer {
+    height: 65vh;
+  }
+
+  .glow-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
 
 /* --- Testimonials Section --- */
 .testimonials-grid {
