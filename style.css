@@ -923,26 +923,99 @@ a:hover {
 }
 
 /* --- Workflow Section --- */
-.workflow-section .section-description {
-    margin-bottom: 80px;
+/* ---- Workflow Section ---- */
+.workflow-section {
+  background-color: #0b0c10;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+.workflow-section .section-title {
+  font-size: 36px;
+  color: #66fcf1;
+  margin-bottom: 50px;
+  text-shadow: 0 0 10px #66fcf1;
 }
 
 .workflow-steps {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .workflow-step {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    position: relative;
+  display: flex;
+  align-items: flex-start;
+  background: #1f2833;
+  border: 2px solid #45a29e;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #45a29e88;
+  transition: all 0.3s ease;
 }
 
-.workflow-step:nth-child(even) {
-    flex-direction: row-reverse; /* Alternate direction */
+.workflow-step:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #66fcf1cc, 0 0 60px #66fcf1aa;
+}
+
+.step-number {
+  font-size: 24px;
+  color: #66fcf1;
+  font-weight: bold;
+  margin-right: 25px;
+  background: #0b0c10;
+  border: 2px solid #66fcf1;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px #66fcf1;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.step-content p {
+  margin: 0;
+  font-size: 15px;
+  color: #c5c6c7;
+  line-height: 1.5;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .workflow-step {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .step-number {
+    margin: 0 0 15px;
+  }
+
+  .workflow-section .section-title {
+    font-size: 28px;
+  }
+
+  .step-content h3 {
+    font-size: 18px;
+  }
+
+  .step-content p {
+    font-size: 14px;
+  }
 }
 
 /* Connector Line (visible on desktop) */
