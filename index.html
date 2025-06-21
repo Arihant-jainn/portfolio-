@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arihant Jain - UI/UX Designer & Full Stack Developer Portfolio</title>
+    
+    <!-- Favicon: Placeholder for your site's icon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Meta Tags for SEO and Social Media Sharing -->
+    <meta name="description" content="[Your comprehensive portfolio description goes here. Focus on your key skills, expertise, and value proposition as a UI/UX Designer and Full Stack Developer.]">
+    <meta name="keywords" content="[Your comma-separated keywords: e.g., Arihant Jain, UI/UX Designer, Full Stack Developer, Portfolio, Web Design, Web Development, React, Node.js, Figma, UX Research, Prototyping, Custom Software, Web Applications, India, Freelance]">
+    <meta name="author" content="Arihant Jain">
+    <meta name="robots" content="index, follow"> <!-- Instructs search engines to index and follow links -->
+    
+    <!-- Open Graph / Facebook Meta Tags for rich social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourportfolio.com/"> <!-- IMPORTANT: Replace with your actual portfolio domain -->
+    <meta property="og:title" content="Arihant Jain - UI/UX Designer & Full Stack Developer Portfolio">
+    <meta property="og:description" content="[A concise description for social media previews. Max 2-3 sentences. Reiterate your value.]">
+    <meta property="og:image" content="https://www.yourportfolio.com/images/og-image.jpg"> <!-- IMPORTANT: Path to a compelling image (e.g., screenshot of hero, your professional headshot) -->
+    <meta property="og:image:width" content="1200"> <!-- Recommended width for OG image -->
+    <meta property="og:image:height" content="630"> <!-- Recommended height for OG image -->
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags for rich social sharing on Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@your_twitter_handle"> <!-- IMPORTANT: Your Twitter handle, if applicable (e.g., @arihantdev) -->
+    <meta name="twitter:creator" content="@your_twitter_handle"> <!-- IMPORTANT: Your Twitter handle -->
+    <meta name="twitter:url" content="https://www.yourportfolio.com/"> <!-- IMPORTANT: Replace with your actual portfolio domain -->
+    <meta name="twitter:title" content="Arihant Jain - UI/UX Designer & Full Stack Developer Portfolio">
+    <meta name="twitter:description" content="[A concise description for Twitter previews. Max 2-3 sentences. Reiterate your value.]">
+    <meta name="twitter:image" content="https://www.yourportfolio.com/images/twitter-image.jpg"> <!-- IMPORTANT: Path to a compelling image (similar to OG image) -->
+
+    <!-- Google Fonts: Poppins (for headings and prominent text) and Inter (for body text) -->
+    <!-- These will be styled in style.css -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons (Version 5.15.4) -->
+    <!-- Used for various icons across the site (e.g., social, skill, contact) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40npFMbNKQFXiPFzh/3j0HpxFwM8B5h3K4f5P4h4A0gM2xJgT6E5D/J+eWq/Q82qR/2e9Z/2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom Global Stylesheet: All your custom CSS will go here -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+        ====================================================================
+        1. Loading Screen Section: Simple animation before content loads
+        ====================================================================
+    -->
+   
+
+    <!-- 
+        ====================================================================
+        2. Header / Navigation Bar: Sticky navigation for desktop and mobile
+        ====================================================================
+    -->
+    <header id="site-header" class="site-header" role="banner">
+        <div class="container header-content">
+            <div class="logo" role="heading" aria-level="1" tabindex="0" aria-label="Arihant Jain Portfolio Home">
+               AJ
+            </div>
+            
+            <!-- Desktop Navigation: Visible on larger screens -->
+            <nav id="desktop-nav" class="desktop-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#home" class="nav-link active" data-target="home" aria-current="page">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-target="about">About</a></li>
+                    <li><a href="#services" class="nav-link" data-target="services">Services</a></li>
+                    <li><a href="#skills" class="nav-link" data-target="skills">Skills</a></li>
+                    <li><a href="#projects" class="nav-link" data-target="projects">Projects</a></li>
+                    <li><a href="#workflow" class="nav-link" data-target="workflow">Workflow</a></li>
+                    <li><a href="#resume" class="nav-link" data-target="resume">Resume</a></li>
+                    <li><a href="#testimonials" class="nav-link" data-target="testimonials">Testimonials</a></li>
+                    <li><a href="#contact" class="nav-link" data-target="contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Hamburger Menu Button: Visible on smaller screens, toggles mobile nav -->
+            <button class="hamburger-menu" id="hamburger-menu" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle mobile navigation">
+                <div class="bar" aria-hidden="true"></div>
+                <div class="bar" aria-hidden="true"></div>
+                <div class="bar" aria-hidden="true"></div>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation: Hidden by default, slides in/out via JavaScript -->
+        <nav id="mobile-nav" class="mobile-nav" aria-hidden="true" tabindex="-1">
+            <ul>
+                <li><a href="#home" class="mobile-nav-link active" data-target="home">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link" data-target="about">About</a></li>
+                <li><a href="#services" class="mobile-nav-link" data-target="services">Services</a></li>
+                <li><a href="#skills" class="mobile-nav-link" data-target="skills">Skills</a></li>
+                <li><a href="#projects" class="mobile-nav-link" data-target="projects">Projects</a></li>
+                <li><a href="#workflow" class="mobile-nav-link" data-target="workflow">Workflow</a></li>
+                <li><a href="#resume" class="mobile-nav-link" data-target="resume">Resume</a></li>
+                <li><a href="#testimonials" class="mobile-nav-link" data-target="testimonials">Testimonials</a></li>
+                <li><a href="#contact" class="mobile-nav-link" data-target="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 
+        ====================================================================
+        3. Hero Section (Home): First impression, full-screen interactive intro
+        ====================================================================
+    -->
+    <section id="home" class="hero-section section-full-height" role="main" aria-labelledby="hero-main-title">
+        <div class="container hero-content">
+            <p class="hero-intro-hi animate-on-load">[Greeting, e.g., "Hello there! I'm Arihant Jain,"]</p>
+            <h1 class="hero-title animate-on-load">
+                <span class="typing-text" aria-label="Dynamic introduction text"></span>
+                <span class="static-text" id="hero-main-title">[Your Core Role, e.g., "Your Digital Solutions Partner"]</span>
+            </h1>
+            <p class="hero-tagline animate-on-load">
+                [Your Professional Tagline, e.g., "Crafting seamless user experiences and robust web applications from concept to deployment."]
+            </p>
+            <div class="hero-buttons animate-on-load" role="group" aria-label="Hero action buttons">
+                <a href="#contact" class="btn btn-primary glow-effect">[Button Text 1, e.g., "Hire Me"] <i class="fas fa-arrow-right"></i></a>
+                <a href="#projects" class="btn btn-secondary glow-effect">[Button Text 2, e.g., "Explore Projects"] <i class="fas fa-project-diagram"></i></a>
+            </div>
+            <!-- Minimal motion background element (for CSS animation) -->
+            <div class="hero-motion-element" aria-hidden="true"></div>
+        </div>
+    </section>
+
+    <main id="main-content">
+        <!-- 
+            ====================================================================
+            4. About Section: Detailed personal introduction and philosophy
+            ====================================================================
+        -->
+        <section id="about" class="about-section section-padding" aria-labelledby="about-title">
+            <div class="container about-content">
+                <div class="about-image-wrapper animate-on-scroll">
+                    <!-- IMPORTANT: Replace with your actual professional photo -->
+                    <img src="images/arihant_jain_photo.jpg" alt="[Descriptive Alt Text for your photo, e.g., 'Professional portrait of Arihant Jain, a UI/UX Designer and Full Stack Developer']" class="about-photo">
+                </div>
+                <div class="about-text-content animate-on-scroll">
+                    <h2 class="section-title" id="about-title">[About Section Title, e.g., "About Me: A Fusion of Design & Code"]</h2>
+                    <div class="about-paragraphs">
+                        <p>[Paragraph 1: Introduction, who you are, your core passion, e.g., "Hello! I'm Arihant Jain, a dedicated and results-driven Full Stack Developer and UI/UX Designer..."]</p>
+                        <p>[Paragraph 2: Your dual expertise and approach, e.g., "My unique blend of skills allows me to approach projects holistically..."]</p>
+                        <p>[Paragraph 3: Your work ethic, commitment, and goals, e.g., "I thrive in dynamic environments where innovation is key..."]</p>
+                        <h3>[Philosophy Subheading, e.g., "My Philosophy: Building Bridges, Not Just Websites"]</h3>
+                        <p>[Brief intro to philosophy, e.g., "I believe that successful digital products are more than just lines of code..."]</p>
+                        <ul>
+                            <li><i class="fas fa-lightbulb icon" aria-hidden="true"></i> <strong>[Philosophy Point 1 Title]:</strong> [Description, e.g., "Innovation & Creativity: Constantly exploring new ideas..."]</li>
+                            <li><i class="fas fa-users-cog icon" aria-hidden="true"></i> <strong>[Philosophy Point 2 Title]:</strong> [Description, e.g., "User-Centricity: Placing the end-user at the heart..."]</li>
+                            <li><i class="fas fa-check-double icon" aria-hidden="true"></i> <strong>[Philosophy Point 3 Title]:</strong> [Description, e.g., "Quality & Reliability: Ensuring robust, bug-free..."]</li>
+                            <li><i class="fas fa-handshake icon" aria-hidden="true"></i> <strong>[Philosophy Point 4 Title]:</strong> [Description, e.g., "Collaboration & Communication: Working transparently..."]</li>
+                        </ul>
+                    </div>
+                    <div class="key-facts">
+                        <h3>[Key Facts Subheading, e.g., "At a Glance:"]</h3>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap icon" aria-hidden="true"></i> <strong>Education:</strong> [Your Education, e.g., "BCA Graduate (Bachelor of Computer Applications) - Delhi University"]</li>
+                            <li><i class="fas fa-map-marker-alt icon" aria-hidden="true"></i> <strong>Location:</strong> [Your Location, e.g., "India (Available for remote collaboration worldwide)"]</li>
+                            <li><i class="fas fa-code-branch icon" aria-hidden="true"></i> <strong>Specialization:</strong> [Your Specialization, e.g., "Full Stack Development & UI/UX Design"]</li>
+                            <li><i class="fas fa-certificate icon" aria-hidden="true"></i> <strong>Certifications:</strong> [Key Certifications, e.g., "MERN Stack, Google UX Design Professional"]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            ====================================================================
+            5. Services Section: What you offer to clients
+            ====================================================================
+        -->
+        <section id="services" class="services-section section-padding" aria-labelledby="services-title">
+            <div class="container">
+                <h2 class="section-title" id="services-title">[Services Section Title, e.g., "My Expert Services"]</h2>
+                <p class="section-description">[Services Intro Text, e.g., "I offer a range of specialized services designed to bring your digital vision to life..."]</p>
+                <div class="services-grid" role="list">
+                    <!-- Service Card 1 -->
+                    <div class="service-card animate-on-scroll" role="listitem" aria-labelledby="service1-title">
+                        <div class="service-icon-wrapper"><i class="fas fa-bezier-curve service-icon" aria-hidden="true"></i></div>
+                        <h3 id="service1-title">[Service 1 Title, e.g., "UI/UX Design & Consulting"]</h3>
+                        <p>[Service 1 Description, e.g., "Crafting engaging and user-friendly interfaces that drive satisfaction and conversion..."]</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 1, e.g., "User Research & Persona Creation"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 2, e.g., "Wireframing & Interactive Prototyping (Figma, Adobe XD)"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 3, e.g., "Intuitive Information Architecture"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 4, e.g., "Usability Testing & Iteration"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 5, e.g., "Branding & Style Guides"]</li>
+                        </ul>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="service-card animate-on-scroll" role="listitem" aria-labelledby="service2-title">
+                        <div class="service-icon-wrapper"><i class="fas fa-laptop-code service-icon" aria-hidden="true"></i></div>
+                        <h3 id="service2-title">[Service 2 Title, e.g., "Frontend Web Development"]</h3>
+                        <p>[Service 2 Description, e.g., "Building high-performance, responsive, and pixel-perfect web interfaces..."]</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 1, e.g., "Responsive Web Design (Pure CSS)"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 2, e.g., "Interactive User Interfaces (React.js, Vanilla JS)"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 3, e.g., "Single Page Application (SPA) Development"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 4, e.g., "API Integration"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 5, e.g., "Performance Optimization"]</li>
+                        </ul>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="service-card animate-on-scroll" role="listitem" aria-labelledby="service3-title">
+                        <div class="service-icon-wrapper"><i class="fas fa-server service-icon" aria-hidden="true"></i></div>
+                        <h3 id="service3-title">[Service 3 Title, e.g., "Backend & API Development"]</h3>
+                        <p>[Service 3 Description, e.g., "Developing robust, secure, and scalable server-side logic..."]</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 1, e.g., "RESTful API Design & Development (Node.js/Express)"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 2, e.g., "Database Design & Management (MongoDB, PostgreSQL)"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 3, e.g., "User Authentication & Authorization"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 4, e.g., "Data Security & Encryption"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 5, e.g., "Server Deployment & Maintenance"]</li>
+                        </ul>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="service-card animate-on-scroll" role="listitem" aria-labelledby="service4-title">
+                        <div class="service-icon-wrapper"><i class="fas fa-cogs service-icon" aria-hidden="true"></i></div>
+                        <h3 id="service4-title">[Service 4 Title, e.g., "Full Stack Development"]</h3>
+                        <p>[Service 4 Description, e.g., "Delivering end-to-end web solutions, from front-end user experience..."]</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 1, e.g., "Complete Web Application Development"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 2, e.g., "MERN Stack Expertise"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 3, e.g., "Cross-Platform Compatibility"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 4, e.g., "Scalable Architecture Design"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 5, e.g., "Continuous Integration/Deployment (CI/CD)"]</li>
+                        </ul>
+                    </div>
+                    <!-- Service Card 5 -->
+                    <div class="service-card animate-on-scroll" role="listitem" aria-labelledby="service5-title">
+                        <div class="service-icon-wrapper"><i class="fas fa-wrench service-icon" aria-hidden="true"></i></div>
+                        <h3 id="service5-title">[Service 5 Title, e.g., "Optimization & Maintenance"]</h3>
+                        <p>[Service 5 Description, e.g., "Ensuring your existing websites and applications run smoothly, securely..."]</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 1, e.g., "Performance Audits & Speed Optimization"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 2, e.g., "Security Enhancements"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 3, e.g., "Bug Fixing & Troubleshooting"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 4, e.g., "Ongoing Technical Support"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 5, e.g., "Feature Updates & Upgrades"]</li>
+                        </ul>
+                    </div>
+                    <!-- Service Card 6 -->
+                    <div class="service-card animate-on-scroll" role="listitem" aria-labelledby="service6-title">
+                        <div class="service-icon-wrapper"><i class="fas fa-comments service-icon" aria-hidden="true"></i></div>
+                        <h3 id="service6-title">[Service 6 Title, e.g., "Technical Consultation"]</h3>
+                        <p>[Service 6 Description, e.g., "Providing expert advice and guidance on technology stacks..."]</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 1, e.g., "Technology Stack Advisory"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 2, e.g., "Project Scoping & Planning"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 3, e.g., "Architecture Review & Recommendations"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 4, e.g., "UX/UI Strategy & Workshops"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Feature 5, e.g., "Code Review & Refactoring Guidance"]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            ====================================================================
+            6. Skills Section: Detailed breakdown of your technical abilities
+            ====================================================================
+        -->
+        <section id="skills" class="skills-section section-padding" aria-labelledby="skills-title">
+            <div class="container">
+                <h2 class="section-title" id="skills-title">[Skills Section Title, e.g., "My Technical Toolkit & Expertise"]</h2>
+                <p class="section-description">[Skills Intro Text, e.g., "A comprehensive overview of the technologies, tools, and methodologies I leverage..."]</p>
+                <div class="skills-grid" role="list">
+                    <!-- Skill Category 1: Design & Prototyping -->
+                    <div class="skill-category animate-on-scroll" role="listitem" aria-labelledby="design-skills-heading">
+                        <h3 id="design-skills-heading"><i class="fas fa-palette skill-icon-category" aria-hidden="true"></i> [Category 1 Title, e.g., "Design & Prototyping"]</h3>
+                        <div class="skill-items-grid">
+                            <div class="skill-item">[Skill 1.1, e.g., "Figma"]</div>
+                            <div class="skill-item">[Skill 1.2, e.g., "Adobe XD"]</div>
+                            <div class="skill-item">[Skill 1.3, e.g., "Sketch"]</div>
+                            <div class="skill-item">[Skill 1.4, e.g., "InVision"]</div>
+                            <div class="skill-item">[Skill 1.5, e.g., "User Research"]</div>
+                            <div class="skill-item">[Skill 1.6, e.g., "Wireframing"]</div>
+                            <div class="skill-item">[Skill 1.7, e.g., "Prototyping"]</div>
+                            <div class="skill-item">[Skill 1.8, e.g., "Usability Testing"]</div>
+                            <div class="skill-item">[Skill 1.9, e.g., "Information Architecture"]</div>
+                            <div class="skill-item">[Skill 1.10, e.g., "Interaction Design"]</div>
+                            <!-- Add more skill items as needed -->
+                        </div>
+                    </div>
+
+                    <!-- Skill Category 2: Frontend Development -->
+                    <div class="skill-category animate-on-scroll" role="listitem" aria-labelledby="frontend-skills-heading">
+                        <h3 id="frontend-skills-heading"><i class="fas fa-desktop skill-icon-category" aria-hidden="true"></i> [Category 2 Title, e.g., "Frontend Development"]</h3>
+                        <div class="skill-items-grid">
+                            <div class="skill-item">[Skill 2.1, e.g., "HTML5"]</div>
+                            <div class="skill-item">[Skill 2.2, e.g., "CSS3 (Pure CSS)"]</div>
+                            <div class="skill-item">[Skill 2.3, e.g., "JavaScript (ES6+)"]</div>
+                            <div class="skill-item">[Skill 2.4, e.g., "React.js"]</div>
+                            <div class="skill-item">[Skill 2.5, e.g., "Redux"]</div>
+                            <div class="skill-item">[Skill 2.6, e.g., "Responsive Design"]</div>
+                            <div class="skill-item">[Skill 2.7, e.g., "Cross-Browser Comp."]</div>
+                            <div class="skill-item">[Skill 2.8, e.g., "Web Performance"]</div>
+                            <div class="skill-item">[Skill 2.9, e.g., "Accessibility (A11Y)"]</div>
+                            <div class="skill-item">[Skill 2.10, e.g., "RESTful API Intergration"]</div>
+                            <!-- Add more skill items as needed -->
+                        </div>
+                    </div>
+
+                    <!-- Skill Category 3: Backend Development -->
+                    <div class="skill-category animate-on-scroll" role="listitem" aria-labelledby="backend-skills-heading">
+                        <h3 id="backend-skills-heading"><i class="fas fa-server skill-icon-category" aria-hidden="true"></i> [Category 3 Title, e.g., "Backend Development"]</h3>
+                        <div class="skill-items-grid">
+                            <div class="skill-item">[Skill 3.1, e.g., "Node.js"]</div>
+                            <div class="skill-item">[Skill 3.2, e.g., "Express.js"]</div>
+                            <div class="skill-item">[Skill 3.3, e.g., "RESTful APIs"]</div>
+                            <div class="skill-item">[Skill 3.4, e.g., "Authentication (JWT)"]</div>
+                            <div class="skill-item">[Skill 3.5, e.g., "Authorization"]</div>
+                            <div class="skill-item">[Skill 3.6, e.g., "WebSockets (Socket.IO)"]</div>
+                            <div class="skill-item">[Skill 3.7, e.g., "Microservices (Basic)"]</div>
+                            <div class="skill-item">[Skill 3.8, e.g., "Server-side Logic"]</div>
+                            <div class="skill-item">[Skill 3.9, e.g., "Third-party Integrations"]</div>
+                            <!-- Add more skill items as needed -->
+                        </div>
+                    </div>
+
+                    <!-- Skill Category 4: Databases -->
+                    <div class="skill-category animate-on-scroll" role="listitem" aria-labelledby="database-skills-heading">
+                        <h3 id="database-skills-heading"><i class="fas fa-database skill-icon-category" aria-hidden="true"></i> [Category 4 Title, e.g., "Databases"]</h3>
+                        <div class="skill-items-grid">
+                            <div class="skill-item">[Skill 4.1, e.g., "MongoDB"]</div>
+                            <div class="skill-item">[Skill 4.2, e.g., "PostgreSQL"]</div>
+                            <div class="skill-item">[Skill 4.3, e.g., "MySQL"]</div>
+                            <div class="skill-item">[Skill 4.4, e.g., "Mongoose ODM"]</div>
+                            <div class="skill-item">[Skill 4.5, e.g., "SQL Queries"]</div>
+                            <div class="skill-item">[Skill 4.6, e.g., "Database Design"]</div>
+                            <div class="skill-item">[Skill 4.7, e.g., "Data Modeling"]</div>
+                            <div class="skill-item">[Skill 4.8, e.g., "Data Migration"]</div>
+                            <!-- Add more skill items as needed -->
+                        </div>
+                    </div>
+
+                    <!-- Skill Category 5: Tools & Platforms -->
+                    <div class="skill-category animate-on-scroll" role="listitem" aria-labelledby="tools-platforms-heading">
+                        <h3 id="tools-platforms-heading"><i class="fas fa-tools skill-icon-category" aria-hidden="true"></i> [Category 5 Title, e.g., "Tools & Platforms"]</h3>
+                        <div class="skill-items-grid">
+                            <div class="skill-item">[Skill 5.1, e.g., "Git"]</div>
+                            <div class="skill-item">[Skill 5.2, e.g., "GitHub"]</div>
+                            <div class="skill-item">[Skill 5.3, e.g., "VS Code"]</div>
+                            <div class="skill-item">[Skill 5.4, e.g., "Postman"]</div>
+                            <div class="skill-item">[Skill 5.5, e.g., "npm/Yarn"]</div>
+                            <div class="skill-item">[Skill 5.6, e.g., "Heroku"]</div>
+                            <div class="skill-item">[Skill 5.7, e.g., "Netlify"]</div>
+                            <div class="skill-item">[Skill 5.8, e.g., "Vercel"]</div>
+                            <div class="skill-item">[Skill 5.9, e.g., "Docker (Basic)"]</div>
+                            <!-- Add more skill items as needed -->
+                        </div>
+                    </div>
+
+                    <!-- Skill Category 6: Methodologies & Other -->
+                    <div class="skill-category animate-on-scroll" role="listitem" aria-labelledby="methodologies-heading">
+                        <h3 id="methodologies-heading"><i class="fas fa-laptop skill-icon-category" aria-hidden="true"></i> [Category 6 Title, e.g., "Methodologies & Other"]</h3>
+                        <div class="skill-items-grid">
+                            <div class="skill-item">[Skill 6.1, e.g., "Agile/Scrum"]</div>
+                            <div class="skill-item">[Skill 6.2, e.g., "MVC Architecture"]</div>
+                            <div class="skill-item">[Skill 6.3, e.g., "Problem Solving"]</div>
+                            <div class="skill-item">[Skill 6.4, e.g., "Team Collaboration"]</div>
+                            <div class="skill-item">[Skill 6.5, e.g., "Project Management"]</div>
+                            <div class="skill-item">[Skill 6.6, e.g., "Communication"]</div>
+                            <div class="skill-item">[Skill 6.7, e.g., "Critical Thinking"]</div>
+                            <div class="skill-item">[Skill 6.8, e.g., "Debugging"]</div>
+                            <!-- Add more skill items as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            ====================================================================
+            7. Projects Section: Showcase of your key projects
+            ====================================================================
+        -->
+        <section id="projects" class="projects-section section-padding" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 class="section-title" id="projects-title">[Projects Section Title, e.g., "Showcase of My Work"]</h2>
+                <p class="section-description">[Projects Intro Text, e.g., "A curated selection of my recent projects, demonstrating my expertise..."]</p>
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <div class="project-card animate-on-scroll" role="article" aria-labelledby="project1-heading">
+                        <img src="images/project1-thumbnail.jpg" alt="[Project 1 Image Alt Text, e.g., 'Thumbnail for E-commerce Platform project']" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3 id="project1-heading">[Project 1 Title, e.g., "E-commerce Platform"]</h3>
+                            <p class="project-description">[Project 1 Detailed Description, 2-3 sentences. e.g., "A comprehensive online retail solution featuring secure user authentication, an extensive product catalog, shopping cart functionality, and integrated payment gateway. Includes an intuitive admin dashboard for efficient inventory and order management."]</p>
+                            <p class="project-tech"><strong>Tech Used:</strong> [Technologies, e.g., React.js, Node.js, MongoDB, Stripe API]</p>
+                            <div class="project-buttons" role="group" aria-label="Project 1 links">
+                                <a href="https://example.com/project1-demo" target="_blank" rel="noopener noreferrer" class="btn btn-small glow-effect">Live Demo <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <a href="https://github.com/Arihant-jainn/project1-source" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline glow-effect">Source Code <i class="fab fa-github" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="project-card animate-on-scroll" role="article" aria-labelledby="project2-heading">
+                        <img src="images/project2-thumbnail.jpg" alt="[Project 2 Image Alt Text, e.g., 'Thumbnail for Collaborative Task Manager project']" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3 id="project2-heading">[Project 2 Title, e.g., "Collaborative Task Manager"]</h3>
+                            <p class="project-description">[Project 2 Detailed Description, 2-3 sentences. e.g., "A responsive, real-time web application designed for efficient task management and team collaboration. Features include a drag-and-drop interface, real-time updates for shared tasks, and user assignment capabilities to streamline workflows."]</p>
+                            <p class="project-tech"><strong>Tech Used:</strong> [Technologies, e.g., HTML5, CSS3, Vanilla JavaScript, Firebase]</p>
+                            <div class="project-buttons" role="group" aria-label="Project 2 links">
+                                <a href="https://example.com/project2-demo" target="_blank" rel="noopener noreferrer" class="btn btn-small glow-effect">Live Demo <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <a href="https://github.com/Arihant-jainn/project2-source" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline glow-effect">Source Code <i class="fab fa-github" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="project-card animate-on-scroll" role="article" aria-labelledby="project3-heading">
+                        <img src="images/project3-thumbnail.jpg" alt="[Project 3 Image Alt Text, e.g., 'Thumbnail for Portfolio Website Redesign project']" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3 id="project3-heading">[Project 3 Title, e.g., "Interactive Portfolio V3"]</h3>
+                            <p class="project-description">[Project 3 Detailed Description, 2-3 sentences. e.g., "The latest iteration of my personal portfolio website, meticulously crafted to showcase my design and development prowess. Built with a focus on modern UI/UX principles, performance optimization, and pure front-end development techniques."]</p>
+                            <p class="project-tech"><strong>Tech Used:</strong> [Technologies, e.g., HTML5, CSS3, Vanilla JavaScript]</p>
+                            <div class="project-buttons" role="group" aria-label="Project 3 links">
+                                <a href="https://example.com/project3-demo" target="_blank" rel="noopener noreferrer" class="btn btn-small glow-effect">Live Demo <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <a href="https://github.com/Arihant-jainn/project3-source" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline glow-effect">Source Code <i class="fab fa-github" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 4 -->
+                    <div class="project-card animate-on-scroll" role="article" aria-labelledby="project4-heading">
+                        <img src="images/project4-thumbnail.jpg" alt="[Project 4 Image Alt Text, e.g., 'Thumbnail for Recipe Sharing App project']" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3 id="project4-heading">[Project 4 Title, e.g., "Recipe Sharing Platform"]</h3>
+                            <p class="project-description">[Project 4 Detailed Description, 2-3 sentences. e.g., "A dynamic, community-driven web platform allowing users to seamlessly share, discover, and save culinary recipes. Features include robust search functionality, user profiles, and recipe rating/commenting systems."]</p>
+                            <p class="project-tech"><strong>Tech Used:</strong> [Technologies, e.g., Node.js, Express.js, PostgreSQL]</p>
+                            <div class="project-buttons" role="group" aria-label="Project 4 links">
+                                <a href="https://example.com/project4-demo" target="_blank" rel="noopener noreferrer" class="btn btn-small glow-effect">Live Demo <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <a href="https://github.com/Arihant-jainn/project4-source" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline glow-effect">Source Code <i class="fab fa-github" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 5 -->
+                    <div class="project-card animate-on-scroll" role="article" aria-labelledby="project5-heading">
+                        <img src="images/project5-thumbnail.jpg" alt="[Project 5 Image Alt Text, e.g., 'Thumbnail for Mobile Banking UI Concept project']" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3 id="project5-heading">[Project 5 Title, e.g., "Banking App UI/UX Concept"]</h3>
+                            <p class="project-description">[Project 5 Detailed Description, 2-3 sentences. e.g., "A meticulously crafted UI/UX design concept for a modern, secure, and intuitive mobile banking application. Focuses on seamless user flows, clear information hierarchy, and enhanced visual appeal for financial transactions."]</p>
+                            <p class="project-tech"><strong>Tools Used:</strong> [Tools, e.g., Figma, Adobe XD]</p>
+                            <div class="project-buttons" role="group" aria-label="Project 5 links">
+                                <a href="https://example.com/project5-demo" target="_blank" rel="noopener noreferrer" class="btn btn-small glow-effect">View Case Study <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <a href="https://example.com/project5-figma" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline glow-effect">Figma Prototype <i class="fas fa-paint-brush" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 6 -->
+                    <div class="project-card animate-on-scroll" role="article" aria-labelledby="project6-heading">
+                        <img src="images/project6-thumbnail.jpg" alt="[Project 6 Image Alt Text, e.g., 'Thumbnail for Real-time Chat Application project']" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3 id="project6-heading">[Project 6 Title, e.g., "Real-time Chat App"]</h3>
+                            <p class="project-description">[Project 6 Detailed Description, 2-3 sentences. e.g., "A dynamic, web-based real-time chat application facilitating instant communication. Features include individual messaging, creation and management of group chats, and robust user authentication system."]</p>
+                            <p class="project-tech"><strong>Tech Used:</strong> [Technologies, e.g., Node.js, Socket.IO, Express.js]</p>
+                            <div class="project-buttons" role="group" aria-label="Project 6 links">
+                                <a href="https://example.com/project6-demo" target="_blank" rel="noopener noreferrer" class="btn btn-small glow-effect">Live Demo <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <a href="https://github.com/Arihant-jainn/project6-source" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline glow-effect">Source Code <i class="fab fa-github" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 7 -->
+                    <div class="project-card animate-on-scroll" role="article" aria-labelledby="project7-heading">
+                        <img src="images/project7-thumbnail.jpg" alt="[Project 7 Image Alt Text, e.g., 'Thumbnail for E-learning Platform Dashboard project']" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3 id="project7-heading">[Project 7 Title, e.g., "E-learning Dashboard UI/UX"]</h3>
+                            <p class="project-description">[Project 7 Detailed Description, 2-3 sentences. e.g., "A comprehensive UI/UX case study and design for an intuitive e-learning platform dashboard, focusing on student progress tracking, course management, and interactive learning modules."]</p>
+                            <p class="project-tech"><strong>Tools Used:</strong> [Tools, e.g., Figma (Extensive component design, user flow mapping)]</p>
+                            <div class="project-buttons" role="group" aria-label="Project 7 links">
+                                <a href="https://example.com/project7-demo" target="_blank" rel="noopener noreferrer" class="btn btn-small glow-effect">View Case Study <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <a href="https://example.com/project7-figma" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline glow-effect">Figma File <i class="fas fa-paint-brush" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 8 -->
+                    <div class="project-card animate-on-scroll" role="article" aria-labelledby="project8-heading">
+                        <img src="images/project8-thumbnail.jpg" alt="[Project 8 Image Alt Text, e.g., 'Thumbnail for Fitness Tracker Backend project']" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3 id="project8-heading">[Project 8 Title, e.g., "Fitness Tracker API"]</h3>
+                            <p class="project-description">[Project 8 Detailed Description, 2-3 sentences. e.g., "Robust backend API for a fitness tracking application. Manages user data, workout logs, progress tracking, and integration with external health devices."]</p>
+                            <p class="project-tech"><strong>Tech Used:</strong> [Technologies, e.g., Node.js, Express.js, MongoDB]</p>
+                            <div class="project-buttons" role="group" aria-label="Project 8 links">
+                                <a href="https://example.com/project8-docs" target="_blank" rel="noopener noreferrer" class="btn btn-small glow-effect">API Docs <i class="fas fa-file-alt" aria-hidden="true"></i></a>
+                                <a href="https://github.com/Arihant-jainn/project8-source" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline glow-effect">Source Code <i class="fab fa-github" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 9 -->
+                    <div class="project-card animate-on-scroll" role="article" aria-labelledby="project9-heading">
+                        <img src="images/project9-thumbnail.jpg" alt="[Project 9 Image Alt Text, e.g., 'Thumbnail for Simple Blog Platform project']" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3 id="project9-heading">[Project 9 Title, e.g., "Simple Blog Platform"]</h3>
+                            <p class="project-description">[Project 9 Detailed Description, 2-3 sentences. e.g., "A minimalist blog platform allowing users to create, read, update, and delete posts. Features a clean interface and robust content management capabilities."]</p>
+                            <p class="project-tech"><strong>Tech Used:</strong> [Technologies, e.g., Node.js, Express.js, MongoDB]</p>
+                            <div class="project-buttons" role="group" aria-label="Project 9 links">
+                                <a href="https://example.com/project9-demo" target="_blank" rel="noopener noreferrer" class="btn btn-small glow-effect">Live Demo <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <a href="https://github.com/Arihant-jainn/project9-source" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline glow-effect">Source Code <i class="fab fa-github" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 10 -->
+                    <div class="project-card animate-on-scroll" role="article" aria-labelledby="project10-heading">
+                        <img src="images/project10-thumbnail.jpg" alt="[Project 10 Image Alt Text, e.g., 'Thumbnail for Educational Game for Kids project']" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3 id="project10-heading">[Project 10 Title, e.g., "Educational Game for Kids"]</h3>
+                            <p class="project-description">[Project 10 Detailed Description, 2-3 sentences. e.g., "An interactive web-based educational game designed for young children, focusing on foundational learning concepts through playful engagement and vibrant visuals."]</p>
+                            <p class="project-tech"><strong>Tech Used:</strong> [Technologies, e.g., HTML5 Canvas, Vanilla JavaScript]</p>
+                            <div class="project-buttons" role="group" aria-label="Project 10 links">
+                                <a href="https://example.com/project10-demo" target="_blank" rel="noopener noreferrer" class="btn btn-small glow-effect">Live Demo <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <a href="https://github.com/Arihant-jainn/project10-source" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline glow-effect">Source Code <i class="fab fa-github" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 11 -->
+                    <div class="project-card animate-on-scroll" role="article" aria-labelledby="project11-heading">
+                        <img src="images/project11-thumbnail.jpg" alt="[Project 11 Image Alt Text, e.g., 'Thumbnail for Cross-Platform Mobile App Concept']" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3 id="project11-heading">[Project 11 Title, e.g., "Cross-Platform Mobile App Concept"]</h3>
+                            <p class="project-description">[Project 11 Detailed Description, 2-3 sentences. e.g., "A high-fidelity UI/UX design and interactive prototype for a mobile application aimed at seamless cross-platform functionality. Focuses on intuitive gesture controls and consistent user experience."]</p>
+                            <p class="project-tech"><strong>Tools Used:</strong> [Tools, e.g., Figma, ProtoPie]</p>
+                            <div class="project-buttons" role="group" aria-label="Project 11 links">
+                                <a href="https://example.com/project11-demo" target="_blank" rel="noopener noreferrer" class="btn btn-small glow-effect">View Case Study <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <a href="https://example.com/project11-figma" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline glow-effect">Prototype <i class="fas fa-paint-brush" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project Card 12 -->
+                    <div class="project-card animate-on-scroll" role="article" aria-labelledby="project12-heading">
+                        <img src="images/project12-thumbnail.jpg" alt="[Project 12 Image Alt Text, e.g., 'Thumbnail for AI Chatbot Integration Showcase']" class="project-thumbnail">
+                        <div class="project-info">
+                            <h3 id="project12-heading">[Project 12 Title, e.g., "AI Chatbot Integration Showcase"]</h3>
+                            <p class="project-description">[Project 12 Detailed Description, 2-3 sentences. e.g., "A demonstration of integrating a custom AI chatbot into a web application to provide instant customer support and automated responses. Showcases natural language processing capabilities."]</p>
+                            <p class="project-tech"><strong>Tech Used:</strong> [Technologies, e.g., Python (Flask), Google Cloud AI, React.js]</p>
+                            <div class="project-buttons" role="group" aria-label="Project 12 links">
+                                <a href="https://example.com/project12-demo" target="_blank" rel="noopener noreferrer" class="btn btn-small glow-effect">Live Demo <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+                                <a href="https://github.com/Arihant-jainn/project12-source" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline glow-effect">Source Code <i class="fab fa-github" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- "View All Projects" button -->
+                <div class="text-center view-all-projects-btn-container animate-on-scroll">
+                    <a href="https://github.com/Arihant-jainn" target="_blank" rel="noopener noreferrer" class="btn btn-secondary glow-effect">View All Projects on GitHub <i class="fab fa-github" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            ====================================================================
+            8. Workflow / Process Section: Your professional approach to projects
+            ====================================================================
+        -->
+        <section id="workflow" class="workflow-section section-padding" aria-labelledby="workflow-title">
+            <div class="container">
+                <h2 class="section-title" id="workflow-title">[Workflow Section Title, e.g., "My Collaborative Workflow"]</h2>
+                <p class="section-description">[Workflow Intro Text, e.g., "My proven process ensures transparency, efficiency, and exceptional results from concept to launch..."]</p>
+                <div class="workflow-steps-grid" role="list">
+                    <!-- Workflow Step 1 -->
+                    <div class="workflow-step-card animate-on-scroll" role="listitem">
+                        <div class="step-number" aria-hidden="true">1</div>
+                        <div class="step-icon-wrapper"><i class="fas fa-search workflow-icon" aria-hidden="true"></i></div>
+                        <h3>[Step 1 Title, e.g., "Discovery & Research"]</h3>
+                        <p>[Step 1 Description, e.g., "Understanding your vision, target audience, and project requirements..."]</p>
+                        <ul class="step-details">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 1.1, e.g., "Requirements Gathering"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 1.2, e.g., "Market & Competitor Analysis"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 1.3, e.g., "User Persona & Journey Mapping"]</li>
+                        </ul>
+                    </div>
+                    <!-- Workflow Step 2 -->
+                    <div class="workflow-step-card animate-on-scroll" role="listitem">
+                        <div class="step-number" aria-hidden="true">2</div>
+                        <div class="step-icon-wrapper"><i class="fas fa-drafting-compass workflow-icon" aria-hidden="true"></i></div>
+                        <h3>[Step 2 Title, e.g., "Design & Prototyping"]</h3>
+                        <p>[Step 2 Description, e.g., "Translating insights into intuitive user interfaces..."]</p>
+                        <ul class="step-details">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 2.1, e.g., "Wireframing & Low-Fidelity Mockups"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 2.2, e.g., "High-Fidelity UI Design"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 2.3, e.g., "Interactive Prototyping"]</li>
+                        </ul>
+                    </div>
+                    <!-- Workflow Step 3 -->
+                    <div class="workflow-step-card animate-on-scroll" role="listitem">
+                        <div class="step-number" aria-hidden="true">3</div>
+                        <div class="step-icon-wrapper"><i class="fas fa-code workflow-icon" aria-hidden="true"></i></div>
+                        <h3>[Step 3 Title, e.g., "Development & Implementation"]</h3>
+                        <p>[Step 3 Description, e.g., "Bringing designs to life with clean, scalable, and efficient code..."]</p>
+                        <ul class="step-details">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 3.1, e.g., "Frontend Development (React.js, HTML, CSS, JS)"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 3.2, e.g., "Backend Development (Node.js, Express.js)"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 3.3, e.g., "Database Integration"]</li>
+                        </ul>
+                    </div>
+                    <!-- Workflow Step 4 -->
+                    <div class="workflow-step-card animate-on-scroll" role="listitem">
+                        <div class="step-number" aria-hidden="true">4</div>
+                        <div class="step-icon-wrapper"><i class="fas fa-bug workflow-icon" aria-hidden="true"></i></div>
+                        <h3>[Step 4 Title, e.g., "Testing & Quality Assurance"]</h3>
+                        <p>[Step 4 Description, e.g., "Rigorous testing across various devices and browsers..."]</p>
+                        <ul class="step-details">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 4.1, e.g., "Unit & Integration Testing"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 4.2, e.g., "Cross-Browser & Device Testing"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 4.3, e.g., "Performance & Security Audits"]</li>
+                        </ul>
+                    </div>
+                    <!-- Workflow Step 5 -->
+                    <div class="workflow-step-card animate-on-scroll" role="listitem">
+                        <div class="step-number" aria-hidden="true">5</div>
+                        <div class="step-icon-wrapper"><i class="fas fa-rocket workflow-icon" aria-hidden="true"></i></div>
+                        <h3>[Step 5 Title, e.g., "Deployment & Launch"]</h3>
+                        <p>[Step 5 Description, e.g., "Careful deployment to the chosen hosting environment..."]</p>
+                        <ul class="step-details">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 5.1, e.g., "Server Configuration & Deployment"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 5.2, e.g., "Domain Setup & SSL Integration"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 5.3, e.g., "Go-Live Support"]</li>
+                        </ul>
+                    </div>
+                    <!-- Workflow Step 6 -->
+                    <div class="workflow-step-card animate-on-scroll" role="listitem">
+                        <div class="step-number" aria-hidden="true">6</div>
+                        <div class="step-icon-wrapper"><i class="fas fa-headset workflow-icon" aria-hidden="true"></i></div>
+                        <h3>[Step 6 Title, e.g., "Support & Maintenance"]</h3>
+                        <p>[Step 6 Description, e.g., "Providing ongoing support, updates, and maintenance..."]</p>
+                        <ul class="step-details">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 6.1, e.g., "Regular Updates & Bug Fixes"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 6.2, e.g., "Performance Monitoring"]</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> [Detail 6.3, e.g., "Feature Enhancements & Scalability"]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            ====================================================================
+            9. Resume Section: Your professional qualifications and experience
+            ====================================================================
+        -->
+        <section id="resume" class="resume-section section-padding" aria-labelledby="resume-title">
+            <div class="container resume-content animate-on-scroll">
+                <h2 class="section-title" id="resume-title">[Resume Section Title, e.g., "My Professional Journey & Qualifications"]</h2>
+                <div class="resume-box">
+                    <p>[Resume Intro Text, e.g., "Below is a detailed overview of my educational background..."]</p>
+                    
+                    <div class="resume-details-grid">
+                        <!-- Resume Category: Education -->
+                        <div class="resume-category animate-on-scroll" aria-labelledby="education-heading">
+                            <h3 id="education-heading"><i class="fas fa-book-open icon" aria-hidden="true"></i> [Category 1 Title, e.g., "Education"]</h3>
+                            <!-- Education Item 1 -->
+                            <div class="resume-item">
+                                <h4>[Degree/Program 1, e.g., "Bachelor of Computer Applications (BCA)"]</h4>
+                                <p class="resume-meta">[Institution, Location | Dates, e.g., "Delhi University, Delhi, India | 2022 - 2025"]</p>
+                                <p class="resume-description">[Brief Description, e.g., "Completed a rigorous program focusing on core computer science concepts..."]</p>
+                                <ul class="resume-highlights">
+                                    <li>[Highlight 1.1, e.g., "<strong>Key Courses:</strong> Data Structures, Algorithms, Web Technologies"]</li>
+                                    <li>[Highlight 1.2, e.g., "<strong>Academic Projects:</strong> Developed a student management system..."]</li>
+                                </ul>
+                            </div>
+                            <!-- Education Item 2 -->
+                            <div class="resume-item">
+                                <h4>[Degree/Program 2, e.g., "Higher Secondary Certificate (HSC) - Science Stream"]</h4>
+                                <p class="resume-meta">[Institution, Location | Dates, e.g., "DPS Public School, Delhi, India | 2021"]</p>
+                                <p class="resume-description">[Brief Description, e.g., "Studied Physics, Chemistry, Mathematics, and Computer Science..."]</p>
+                            </div>
+                            <!-- Add more education items as needed -->
+                        </div>
+
+                        <!-- Resume Category: Professional Experience -->
+                        <div class="resume-category animate-on-scroll" aria-labelledby="experience-heading">
+                            <h3 id="experience-heading"><i class="fas fa-briefcase icon" aria-hidden="true"></i> [Category 2 Title, e.g., "Professional Experience"]</h3>
+                            <!-- Experience Item 1 -->
+                            <div class="resume-item">
+                                <h4>[Role 1, e.g., "Junior Full Stack Developer Intern"]</h4>
+                                <p class="resume-meta">[Company, Location | Dates, e.g., "Tech Innovators Inc., Remote | June 2024 - August 2024"]</p>
+                                <p class="resume-description">[Brief Description, e.g., "Contributed to the development of robust web applications within an agile team..."]</p>
+                                <ul class="resume-highlights">
+                                    <li>[Achievement 2.1, e.g., "Developed and maintained RESTful APIs using Node.js and Express.js..."]</li>
+                                    <li>[Achievement 2.2, e.g., "Contributed significantly to front-end development of client dashboards using React.js..."]</li>
+                                    <li>[Achievement 2.3, e.g., "Collaborated closely with senior developers on database schema design..."]</li>
+                                    <li>[Achievement 2.4, e.g., "Actively participated in daily stand-ups, sprint planning, and code reviews..."]</li>
+                                    <li>[Achievement 2.5, e.g., "Implemented user authentication and authorization features (JWT)..."]</li>
+                                </ul>
+                            </div>
+                            <!-- Experience Item 2 -->
+                            <div class="resume-item">
+                                <h4>[Role 2, e.g., "Freelance UI/UX Designer & Developer"]</h4>
+                                <p class="resume-meta">[Company/Self-Employed | Dates, e.g., "Self-Employed | 2023 - Present"]</p>
+                                <p class="resume-description">[Brief Description, e.g., "Provided comprehensive design and development solutions for a diverse range of clients..."]</p>
+                                <ul class="resume-highlights">
+                                    <li>[Achievement 2.1, e.g., "Designed and delivered intuitive user interfaces (UI) and engaging user experiences (UX)..."]</li>
+                                    <li>[Achievement 2.2, e.g., "Conducted extensive user research, created detailed wireframes, interactive prototypes..."]</li>
+                                    <li>[Achievement 2.3, e.g., "Developed custom, responsive websites from concept to deployment..."]</li>
+                                    <li>[Achievement 2.4, e.g., "Managed client communication, project timelines, and expectations effectively..."]</li>
+                                </ul>
+                            </div>
+                            <!-- Add more experience items as needed -->
+                        </div>
+
+                        <!-- Resume Category: Key Skills (Textual Breakdown) -->
+                        <div class="resume-category animate-on-scroll" aria-labelledby="key-skills-heading">
+                            <h3 id="key-skills-heading"><i class="fas fa-cogs icon" aria-hidden="true"></i> [Category 3 Title, e.g., "Key Skills & Technologies"]</h3>
+                            <div class="resume-item">
+                                <p class="resume-description">[Brief Intro, e.g., "A concise breakdown of my technical proficiencies:"]</p>
+                                <ul class="resume-highlights skill-grid-compact">
+                                    <li><strong>Frontend:</strong> [Skills, e.g., "React.js, JavaScript (ES6+), HTML5, CSS3 (Flexbox, Grid), Responsive Design"]</li>
+                                    <li><strong>Backend:</strong> [Skills, e.g., "Node.js, Express.js, RESTful APIs, Passport.js (Auth)"]</li>
+                                    <li><strong>Databases:</strong> [Skills, e.g., "MongoDB (Mongoose), PostgreSQL, SQL"]</li>
+                                    <li><strong>UI/UX Tools:</strong> [Skills, e.g., "Figma, Adobe XD, Sketch, User Research, Prototyping"]</li>
+                                    <li><strong>Version Control:</strong> [Skills, e.g., "Git, GitHub"]</li>
+                                    <li><strong>Deployment:</strong> [Skills, e.g., "Heroku, Netlify, Vercel"]</li>
+                                    <li><strong>Other:</strong> [Skills, e.g., "API Integration, Problem Solving, Agile Methodologies, Communication"]</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Resume Category: Certifications & Awards -->
+                        <div class="resume-category animate-on-scroll" aria-labelledby="certs-awards-heading">
+                            <h3 id="certs-awards-heading"><i class="fas fa-award icon" aria-hidden="true"></i> [Category 4 Title, e.g., "Certifications & Achievements"]</h3>
+                            <!-- Certification/Award Item 1 -->
+                            <div class="resume-item">
+                                <h4>[Certification/Award 1 Title, e.g., "MERN Stack Development Course"]</h4>
+                                <p class="resume-meta">[Provider | Year, e.g., "Udemy | 2024"]</p>
+                                <p class="resume-description">[Brief Description, e.g., "Completed a comprehensive program covering full-stack web development..."]</p>
+                            </div>
+                            <!-- Certification/Award Item 2 -->
+                            <div class="resume-item">
+                                <h4>[Certification/Award 2 Title, e.g., "Google UX Design Professional Certificate"]</h4>
+                                <p class="resume-meta">[Provider | Year, e.g., "Coursera | 2023"]</p>
+                                <p class="resume-description">[Brief Description, e.g., "Acquired foundational UX skills in design thinking, user research..."]</p>
+                            </div>
+                            <!-- Certification/Award Item 3 -->
+                            <div class="resume-item">
+                                <h4>[Certification/Award 3 Title, e.g., "Hackathon Winner: 'Innovate AI' Challenge"]</h4>
+                                <p class="resume-meta">[Organizer | Year, e.g., "Local Tech Community | 2023"]</p>
+                                <p class="resume-description">[Brief Description, e.g., "Awarded for developing an innovative AI-powered productivity tool prototype..."]</p>
+                            </div>
+                            <!-- Add more certifications/awards as needed -->
+                        </div>
+                    </div> <!-- End resume-details-grid -->
+
+                    <div class="resume-download-section">
+                        <p>[Download Resume CTA Text, e.g., "For a detailed breakdown of my qualifications, project specifics, and a full list of achievements, download my complete resume."]</p>
+                        <a href="resume.pdf" download class="btn btn-primary resume-download-btn glow-effect" aria-label="Download Arihant Jain's Full Resume PDF">
+                            <i class="fas fa-download icon" aria-hidden="true"></i> Download Full Resume (PDF)
+                        </a>
+                        <!-- IMPORTANT: Place your 'resume.pdf' file in the same directory as index.html for this to work -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            ====================================================================
+            10. Testimonials Section: Client feedback to build trust
+            ====================================================================
+        -->
+        <section id="testimonials" class="testimonials-section section-padding" aria-labelledby="testimonials-title">
+            <div class="container">
+                <h2 class="section-title" id="testimonials-title">[Testimonials Section Title, e.g., "What My Clients Say"]</h2>
+                <p class="section-description">[Testimonials Intro Text, e.g., "Valuable feedback from partners and clients, reflecting the quality and impact of my work..."]</p>
+                <div class="testimonials-grid">
+                    <!-- Testimonial Card 1 -->
+                    <div class="testimonial-card animate-on-scroll" role="figure" aria-labelledby="client1-name">
+                        <!-- IMPORTANT: Replace with client avatar image -->
+                        <img src="images/client1-avatar.jpg" alt="[Client 1 Name, Title]" class="client-avatar">
+                        <blockquote>
+                            <p class="testimonial-text">"[Client 1 Testimonial Text. Make it professional and specific to your work.]"</p>
+                        </blockquote>
+                        <figcaption class="client-info">
+                            <p class="client-name" id="client1-name">- <strong>[Client 1 Name]</strong></p>
+                            <p class="client-title">[Client 1 Title, Company]</p>
+                        </figcaption>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="testimonial-card animate-on-scroll" role="figure" aria-labelledby="client2-name">
+                        <img src="images/client2-avatar.jpg" alt="[Client 2 Name, Title]" class="client-avatar">
+                        <blockquote>
+                            <p class="testimonial-text">"[Client 2 Testimonial Text. Focus on a different aspect of your skills.]"</p>
+                        </blockquote>
+                        <figcaption class="client-info">
+                            <p class="client-name" id="client2-name">- <strong>[Client 2 Name]</strong></p>
+                            <p class="client-title">[Client 2 Title, Company]</p>
+                        </figcaption>
+                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="testimonial-card animate-on-scroll" role="figure" aria-labelledby="client3-name">
+                        <img src="images/client3-avatar.jpg" alt="[Client 3 Name, Title]" class="client-avatar">
+                        <blockquote>
+                            <p class="testimonial-text">"[Client 3 Testimonial Text. Highlight your design thinking or problem-solving.]"</p>
+                        </blockquote>
+                        <figcaption class="client-info">
+                            <p class="client-name" id="client3-name">- <strong>[Client 3 Name]</strong></p>
+                            <p class="client-title">[Client 3 Title, Company]</p>
+                        </figcaption>
+                    </div>
+                    <!-- Testimonial Card 4 -->
+                    <div class="testimonial-card animate-on-scroll" role="figure" aria-labelledby="client4-name">
+                        <img src="images/client4-avatar.jpg" alt="[Client 4 Name, Title]" class="client-avatar">
+                        <blockquote>
+                            <p class="testimonial-text">"[Client 4 Testimonial Text. Emphasize collaboration or technical prowess.]"</p>
+                        </blockquote>
+                        <figcaption class="client-info">
+                            <p class="client-name" id="client4-name">- <strong>[Client 4 Name]</strong></p>
+                            <p class="client-title">[Client 4 Title, Company]</p>
+                        </figcaption>
+                    </div>
+                    <!-- Testimonial Card 5 -->
+                    <div class="testimonial-card animate-on-scroll" role="figure" aria-labelledby="client5-name">
+                        <img src="images/client5-avatar.jpg" alt="[Client 5 Name, Title]" class="client-avatar">
+                        <blockquote>
+                            <p class="testimonial-text">"[Client 5 Testimonial Text. Focus on client satisfaction or meeting business needs.]"</p>
+                        </blockquote>
+                        <figcaption class="client-info">
+                            <p class="client-name" id="client5-name">- <strong>[Client 5 Name]</strong></p>
+                            <p class="client-title">[Client 5 Title, Company]</p>
+                        </figcaption>
+                    </div>
+                    <!-- Testimonial Card 6 -->
+                    <div class="testimonial-card animate-on-scroll" role="figure" aria-labelledby="client6-name">
+                        <img src="images/client6-avatar.jpg" alt="[Client 6 Name, Title]" class="client-avatar">
+                        <blockquote>
+                            <p class="testimonial-text">"[Client 6 Testimonial Text. Highlight your efficiency or quick learning ability.]"</p>
+                        </blockquote>
+                        <figcaption class="client-info">
+                            <p class="client-name" id="client6-name">- <strong>[Client 6 Name]</strong></p>
+                            <p class="client-title">[Client 6 Title, Company]</p>
+                        </figcaption>
+                    </div>
+                    <!-- Add more testimonial cards here to reach desired line count (e.g., up to 10-12 cards) -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            ====================================================================
+            11. Contact Section: How clients can reach you
+            ====================================================================
+        -->
+        <section id="contact" class="contact-section section-padding" aria-labelledby="contact-title">
+            <div class="container contact-content">
+                <div class="contact-form-container animate-on-scroll">
+                    <h2 class="section-title" id="contact-title">[Contact Section Title, e.g., "Let’s Connect & Collaborate"]</h2>
+                    <p class="form-intro-text">[Contact Form Intro Text, e.g., "Have a challenging project in mind? A question about my work or services?"]</p>
+                    <form id="contact-form" class="contact-form" novalidate aria-label="Contact form for project inquiries">
+                        <div class="form-group">
+                            <label for="name" class="visually-hidden">Your Full Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your Full Name" required aria-required="true">
+                            <div class="error-message" id="name-error" aria-live="polite"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="visually-hidden">Your Email Address:</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email Address" required aria-required="true">
+                            <div class="error-message" id="email-error" aria-live="polite"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="visually-hidden">Subject of your Message:</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject (e.g., Project Inquiry, Collaboration)" aria-label="Subject of your message">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="visually-hidden">Your Message:</label>
+                            <textarea id="message" name="message" rows="7" placeholder="Write your message here..." required aria-required="true"></textarea>
+                            <div class="error-message" id="message-error" aria-live="polite"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary glow-effect">Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+                        <div id="form-submission-message" class="form-submission-message" aria-live="polite" role="status"></div>
+                    </form>
+                </div>
+                <div class="contact-info-socials-wrapper animate-on-scroll">
+                    <div class="contact-info">
+                        <h3>[Contact Details Subheading, e.g., "Direct Contact:"]</h3>
+                        <ul>
+                            <li><i class="fas fa-envelope icon" aria-hidden="true"></i> Email: <a href="mailto:your.email@example.com" aria-label="Send email to Arihant Jain">your.email@example.com</a></li> <!-- IMPORTANT: Replace with your actual email -->
+                            <li><i class="fas fa-phone-alt icon" aria-hidden="true"></i> Phone: <a href="tel:+911234567890" aria-label="Call Arihant Jain">+91 123-456-7890</a></li> <!-- IMPORTANT: Replace with your actual phone number -->
+                            <li><i class="fas fa-map-marker-alt icon" aria-hidden="true"></i> Location: [Your Location, e.g., "India"]</li>
+                        </ul>
+                    </div>
+                    <div class="contact-socials">
+                        <h3>[Social Media Subheading, e.g., "Connect with Me:"]</h3>
+                        <div class="social-icons" role="group" aria-label="Social Media Links">
+                            <a href="https://github.com/Arihant-jainn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fab fa-github social-icon-hover" aria-hidden="true"></i></a>
+                            <a href="https://linkedin.com/in/arihantjain" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in social-icon-hover" aria-hidden="true"></i></a> <!-- IMPORTANT: Replace with your LinkedIn profile -->
+                            <a href="mailto:your.email@example.com" aria-label="Send an Email"><i class="fas fa-envelope social-icon-hover" aria-hidden="true"></i></a> <!-- IMPORTANT: Replace with your actual email -->
+                            <a href="https://twitter.com/your-twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile"><i class="fab fa-twitter social-icon-hover" aria-hidden="true"></i></a> <!-- IMPORTANT: Replace with your Twitter handle if applicable -->
+                            <a href="https://www.behance.net/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Behance Profile"><i class="fab fa-behance social-icon-hover" aria-hidden="true"></i></a> <!-- IMPORTANT: Replace with your Behance profile if applicable -->
+                            <a href="https://dribbble.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Dribbble Profile"><i class="fab fa-dribbble social-icon-hover" aria-hidden="true"></i></a> <!-- IMPORTANT: Replace with your Dribbble profile if applicable -->
+                            <a href="https://medium.com/@yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Medium Profile"><i class="fab fa-medium social-icon-hover" aria-hidden="true"></i></a> <!-- IMPORTANT: Replace with your Medium profile if applicable -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 
+        ====================================================================
+        12. Footer Section: Copyright and Scroll-to-top functionality
+        ====================================================================
+    -->
+    <footer id="site-footer" class="site-footer" role="contentinfo">
+        <div class="container footer-content">
+            <p>&copy; <span id="current-year"></span> Arihant Jain. All Rights Reserved. Designed with <i class="fas fa-heart" aria-hidden="true"></i> and Code.</p>
+            <a href="#home" class="scroll-to-top-btn" aria-label="Scroll to Top of Page">
+                <i class="fas fa-chevron-up" aria-hidden="true"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript for interactivity and animations -->
+    <script src="script.js"></script>
+</body>
+</html>
