@@ -924,74 +924,137 @@ a:hover {
 
 /* --- Workflow Section --- */
 /* ---- Workflow Section ---- */
+/* ---- Workflow Section (Timeline) ---- */
 .workflow-section {
   background-color: #0b0c10;
   padding: 80px 20px;
-  font-family: 'Poppins', sans-serif;
   color: #ffffff;
-  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.workflow-container {
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+  padding: 0 20px;
 }
 
 .workflow-section .section-title {
+  text-align: center;
   font-size: 36px;
+  margin-bottom: 80px;
   color: #66fcf1;
-  margin-bottom: 50px;
-  text-shadow: 0 0 10px #66fcf1;
+  text-shadow: 0 0 12px #66fcf1;
 }
 
-.workflow-steps {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
+.timeline {
+  position: relative;
+  padding: 20px 0;
 }
 
-.workflow-step {
-  display: flex;
-  align-items: flex-start;
-  background: #1f2833;
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #45a29e;
+  box-shadow: 0 0 20px #66fcf1;
+}
+
+.timeline-item {
+  padding: 20px 30px;
+  position: relative;
+  width: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-content {
+  background-color: #1f2833;
   border: 2px solid #45a29e;
-  padding: 25px 30px;
-  border-radius: 12px;
   box-shadow: 0 0 15px #45a29e88;
-  transition: all 0.3s ease;
+  padding: 20px 25px;
+  border-radius: 12px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.workflow-step:hover {
+.timeline-content:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 25px #66fcf1cc, 0 0 60px #66fcf1aa;
+  box-shadow: 0 0 25px #66fcf1aa, 0 0 60px #66fcf1aa;
 }
 
-.step-number {
-  font-size: 24px;
-  color: #66fcf1;
-  font-weight: bold;
-  margin-right: 25px;
-  background: #0b0c10;
-  border: 2px solid #66fcf1;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 10px #66fcf1;
-  flex-shrink: 0;
-}
-
-.step-content h3 {
-  margin: 0 0 8px;
+.timeline-content h3 {
   font-size: 20px;
-  color: #ffffff;
+  color: #66fcf1;
+  margin-bottom: 10px;
 }
 
-.step-content p {
-  margin: 0;
+.timeline-content p {
   font-size: 15px;
   color: #c5c6c7;
-  line-height: 1.5;
+  line-height: 1.6;
 }
+
+/* Dots on center line */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #66fcf1;
+  border: 3px solid #0b0c10;
+  box-shadow: 0 0 10px #66fcf1;
+  z-index: 2;
+}
+
+.timeline-item.left::after {
+  right: -10px;
+}
+
+.timeline-item.right::after {
+  left: -10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 10px;
+    text-align: left;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item::after {
+    left: 0;
+  }
+}
+
 
 /* Responsive layout */
 @media (max-width: 768px) {
