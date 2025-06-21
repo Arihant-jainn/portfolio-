@@ -527,13 +527,11 @@ ul {
 */
 /* style.css */
 
-/* ... (your existing CSS code) ... */
-
+/* ... (your existing CSS code above the About Section styles) ... */
 
 /* About Section Specific Styles */
 .about-section {
-    background-color: var(--color-background-secondary);
-    /* Ensure flexbox for content alignment */
+    background-color: var(--color-background-light-elements); /* Corrected: Used existing background var */
 }
 
 .about-content {
@@ -562,10 +560,10 @@ ul {
     padding: 10px; /* Padding for the glowing border effect */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     /* Initial state for animation */
-    opacity: 0;
-    transform: perspective(1000px) rotateX(90deg); /* Start folded */
+    opacity: 0; /* Starts hidden for animation */
+    transform: perspective(1000px) rotateX(90deg); /* Start folded for animation */
     transform-origin: top center; /* Fold from the top */
-    transition: none; /* Reset transition for initial state */
+    transition: none; /* Reset transition for initial state before animation starts */
 }
 
 /* Glowing border effect on image wrapper */
@@ -578,7 +576,7 @@ ul {
     bottom: 0;
     border-radius: 15px;
     padding: 2px; /* Thickness of the border */
-    background: linear-gradient(45deg, var(--color-electric-blue), var(--color-neon-purple));
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary)); /* Corrected: Used existing primary/secondary vars */
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
@@ -641,7 +639,7 @@ ul {
 .about-text-content h3 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.8em;
-    color: var(--color-primary);
+    color: var(--color-primary); /* Corrected: Used existing primary var */
     margin-bottom: 15px;
     line-height: 1.3;
 }
@@ -650,7 +648,7 @@ ul {
     font-size: 1.1em;
     line-height: 1.7;
     margin-bottom: 20px;
-    color: var(--color-text-light);
+    color: var(--color-text-light); /* Corrected: Used existing text-light var */
 }
 
 .key-facts {
@@ -662,49 +660,16 @@ ul {
 .key-facts li {
     font-size: 1.05em;
     margin-bottom: 10px;
-    color: var(--color-text-medium);
+    color: var(--color-text-muted); /* Corrected: Used existing text-muted var */
 }
 
 .key-facts li .icon {
-    color: var(--color-neon-purple);
+    color: var(--color-secondary); /* Corrected: Used existing secondary var */
     margin-right: 10px;
     font-size: 1.2em;
 }
 
-
-/* ... (rest of your existing CSS code) ... */
-
-
-.key-facts ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.key-facts ul li {
-  display: flex;
-  align-items: center;
-  background-color: var(--color-background-dark);
-  padding: 1rem 1.2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  color: var(--color-text-light);
-  font-size: var(--font-size-small);
-}
-
-.key-facts ul li strong {
-  margin-right: 0.5rem;
-  color: var(--color-primary);
-}
-
-.key-facts ul li .icon {
-  font-size: 1.3em;
-  color: var(--color-secondary);
-  margin-right: 0.8rem;
-}
-
-/*
+/* ... (rest of your existing CSS code below the About Section styles) ... */
 ====================================================================
 5. Services Section
 ====================================================================
