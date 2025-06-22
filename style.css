@@ -1154,48 +1154,46 @@ a:hover {
 
 
 /* --- Resume Section --- */
-/* ---- Resume Section ---- */
+/* ==== Resume Section ==== */
 .resume-section {
   background-color: #0b0c10;
-  padding: 80px 20px;
-  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  color: #fff;
   font-family: 'Poppins', sans-serif;
+}
+
+/* Container */
+.resume-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-.resume-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.resume-section .section-title {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #66fcf1;
-  text-shadow: 0 0 12px #66fcf1;
-}
-
+/* === Fullscreen Resume Viewer === */
 .resume-viewer {
-  width: 100%;
-  height: 80vh;
-  box-shadow: 0 0 20px #45a29e88;
-  border: 2px solid #45a29e;
-  border-radius: 12px;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
+  box-shadow: 0 0 20px #45a29e88;
+  border-bottom: 2px solid #45a29e;
 }
 
 .resume-viewer iframe {
   width: 100%;
   height: 100%;
   border: none;
+  display: block;
 }
 
+/* === Download Button === */
 .resume-download {
-  margin-top: 30px;
+  margin: 30px auto 60px;
+  text-align: center;
 }
 
 .glow-button {
-  display: inline-block;
   background-color: #1f2833;
   color: #66fcf1;
   padding: 14px 30px;
@@ -1215,9 +1213,10 @@ a:hover {
   color: #ffffff;
 }
 
-/* ---- Certificate Cards (Real Thumbnails) ---- */
+/* === Certificates Section === */
 .certificates-wrapper {
   margin-top: 60px;
+  padding: 0 20px 60px;
 }
 
 .certificates-heading {
@@ -1231,9 +1230,8 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
-  margin: 40px auto 0;
   max-width: 1000px;
-  padding: 0 20px;
+  margin: 0 auto;
 }
 
 .certificate-card-real {
@@ -1256,7 +1254,7 @@ a:hover {
 
 .certificate-card-real img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   border-bottom: 2px solid #45a29e;
 }
@@ -1272,7 +1270,7 @@ a:hover {
   border-top: 1px solid #45a29e;
 }
 
-/* Responsive Adjustments */
+/* === Responsive === */
 @media (max-width: 768px) {
   .resume-viewer {
     height: 65vh;
@@ -1295,7 +1293,6 @@ a:hover {
     font-size: 14px;
   }
 }
-
 
 
 
