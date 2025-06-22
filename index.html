@@ -505,37 +505,52 @@
             11. Contact Section: How clients can reach you
             ====================================================================
         -->
-  <section id="contact" class="contact-section">
+<section id="contact" class="contact-section">
   <div class="contact-container">
-    <h2 class="section-title">Get In Touch</h2>
+    <h2 class="contact-title">Let's Build Something Together</h2>
+    <p class="contact-subtitle">Have a project in mind? Let's connect!</p>
 
     <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-      <!-- Optional: disable captcha & set redirect -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
 
-      <div class="form-group">
-        <input type="text" name="name" placeholder="Your Name" required>
-      </div>
+      <div class="form-grid">
+        <!-- Left Column -->
+        <div class="form-field">
+          <input type="text" name="name" id="name" required />
+          <label for="name">Name</label>
+        </div>
 
-      <div class="form-group">
-        <input type="email" name="email" placeholder="Your Email" required>
-      </div>
+        <div class="form-field">
+          <input type="email" name="email" id="email" required />
+          <label for="email">Email</label>
+        </div>
 
-      <div class="form-group">
-        <input type="text" name="subject" placeholder="Subject" required>
-      </div>
+        <div class="form-field">
+          <input type="text" name="phone" id="phone" />
+          <label for="phone">Phone</label>
+        </div>
 
-      <div class="form-group">
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      </div>
+        <div class="form-field">
+          <input type="text" name="subject" id="subject" required />
+          <label for="subject">Subject</label>
+        </div>
 
-      <div class="form-group">
-        <button type="submit" class="glow-button">Send Message</button>
+        <!-- Message (Full Row) -->
+        <div class="form-field full">
+          <textarea name="message" id="message" rows="6" required></textarea>
+          <label for="message">Your Message</label>
+        </div>
+
+        <!-- Submit Button (Full Row) -->
+        <div class="form-button full">
+          <button type="submit" class="glow-button">Send Message 🚀</button>
+        </div>
       </div>
     </form>
   </div>
 </section>
+
 
     <!-- 
         ====================================================================
