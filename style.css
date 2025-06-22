@@ -838,6 +838,20 @@ a:hover {
   transform: translate(-50%, -50%);
   transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
 }
+.skill-block {
+  /* background, border, glow, etc. */
+}
+.skill-block h3 {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #45a29e;
+}
+.skill-block ul {
+  padding-left: 20px;
+  list-style-type: '▶ ';
+}
+
 
 .skill-card.clicked::after {
   width: 200px;
