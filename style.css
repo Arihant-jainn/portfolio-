@@ -1154,7 +1154,7 @@ a:hover {
 
 
 /* --- Resume Section --- */
-/* ==== Resume Section ==== */
+/* === Resume Section === */
 .resume-section {
   background-color: #0b0c10;
   padding: 0;
@@ -1163,33 +1163,40 @@ a:hover {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Container */
 .resume-container {
   max-width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   text-align: center;
 }
 
-/* === Fullscreen Resume Viewer === */
-.resume-viewer {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  box-shadow: 0 0 20px #45a29e88;
-  border-bottom: 2px solid #45a29e;
+/* === Resume Image Display === */
+.resume-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px 30px;
+  box-sizing: border-box;
 }
 
-.resume-viewer iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
+.resume-image {
+  width: 80%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #45a29e;
+  box-shadow: 0 0 30px #45a29e88;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-image:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 45px #66fcf1aa, 0 0 80px #45a29e88;
 }
 
 /* === Download Button === */
 .resume-download {
-  margin: 30px auto 60px;
+  margin: 30px auto 80px;
   text-align: center;
 }
 
@@ -1216,7 +1223,7 @@ a:hover {
 /* === Certificates Section === */
 .certificates-wrapper {
   margin-top: 60px;
-  padding: 0 20px 60px;
+  padding: 0 20px 80px;
 }
 
 .certificates-heading {
@@ -1232,6 +1239,8 @@ a:hover {
   gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .certificate-card-real {
@@ -1270,23 +1279,23 @@ a:hover {
   border-top: 1px solid #45a29e;
 }
 
-/* === Responsive === */
+/* === Responsive Layout === */
 @media (max-width: 768px) {
-  .resume-viewer {
-    height: 65vh;
-  }
-
-  .glow-button {
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-
-  .certificates-heading {
-    font-size: 24px;
+  .resume-image {
+    width: 95%;
   }
 
   .certificate-grid-real {
     grid-template-columns: 1fr;
+  }
+
+  .certificates-heading {
+    font-size: 22px;
+  }
+
+  .glow-button {
+    font-size: 14px;
+    padding: 12px 24px;
   }
 
   .cert-caption {
