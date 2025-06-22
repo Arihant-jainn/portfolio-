@@ -1469,87 +1469,131 @@ a:hover {
 }
 
 
-/* --- Contact Section --- */
-/* === Contact Section === */
+/* --- Contact Section --- *//* === Smart Glowing Contact Section === */
 .contact-section {
   background-color: #0b0c10;
   padding: 100px 20px;
-  color: #ffffff;
+  color: #fff;
   font-family: 'Poppins', sans-serif;
-  text-align: center;
 }
 
 .contact-container {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
 
-.contact-section .section-title {
+.contact-title {
   font-size: 36px;
-  margin-bottom: 40px;
   color: #66fcf1;
+  margin-bottom: 10px;
   text-shadow: 0 0 10px #66fcf1;
 }
 
-.contact-form .form-group {
-  margin-bottom: 25px;
+.contact-subtitle {
+  font-size: 16px;
+  color: #c5c6c7;
+  margin-bottom: 40px;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form {
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.form-field {
+  position: relative;
+  width: 100%;
+}
+
+.form-field input,
+.form-field textarea {
   width: 100%;
   padding: 14px 16px;
   font-size: 16px;
-  background-color: #1f2833;
+  background-color: transparent;
+  color: #fff;
   border: 2px solid #45a29e;
   border-radius: 8px;
-  color: #ffffff;
-  box-shadow: 0 0 12px #45a29e55;
+  outline: none;
   transition: all 0.3s ease;
+  box-shadow: 0 0 10px transparent;
+}
+
+.form-field textarea {
   resize: none;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #66fcf1;
-  box-shadow: 0 0 15px #66fcf1cc;
+.form-field label {
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  color: #aaa;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s ease all;
 }
 
-.contact-form .glow-button {
+.form-field input:focus + label,
+.form-field input:not(:placeholder-shown) + label,
+.form-field textarea:focus + label,
+.form-field textarea:not(:placeholder-shown) + label {
+  top: -12px;
+  left: 12px;
+  font-size: 12px;
+  background: #0b0c10;
+  padding: 0 5px;
+  color: #66fcf1;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: #66fcf1;
+  box-shadow: 0 0 12px #66fcf1cc;
+}
+
+.full {
+  grid-column: span 2;
+}
+
+/* Glowing Button */
+.glow-button {
   background-color: #1f2833;
   color: #66fcf1;
-  padding: 14px 30px;
-  font-size: 16px;
-  border-radius: 8px;
+  padding: 14px 36px;
+  font-size: 18px;
+  border-radius: 10px;
   border: 2px solid #45a29e;
-  text-decoration: none;
-  font-weight: 500;
-  box-shadow: 0 0 12px #45a29e99;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px #45a29e88;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.contact-form .glow-button:hover {
-  box-shadow: 0 0 20px #66fcf1cc, 0 0 40px #66fcf1cc;
+.glow-button:hover {
+  box-shadow: 0 0 30px #66fcf1cc, 0 0 60px #66fcf1cc;
   background-color: #0b0c10;
   color: #ffffff;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .contact-section .section-title {
-    font-size: 28px;
+  .form-grid {
+    grid-template-columns: 1fr;
   }
 
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 14px;
+  .full {
+    grid-column: 1 / -1;
   }
 
-  .contact-form .glow-button {
-    font-size: 14px;
-    padding: 12px 24px;
+  .glow-button {
+    font-size: 16px;
+    padding: 12px 28px;
   }
 }
 
