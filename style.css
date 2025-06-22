@@ -1381,6 +1381,71 @@ a:hover {
     font-size: 15px;
   }
 }
+/* === Social Links Section === */
+.social-section {
+  background-color: #0b0c10;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.social-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.social-section .section-title {
+  font-size: 28px;
+  color: #66fcf1;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px #66fcf1;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32px;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid #45a29e;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 15px #45a29e66;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-6px);
+  color: #66fcf1;
+  box-shadow: 0 0 30px #66fcf1cc, 0 0 60px #45a29e88;
+}
+
+.social-icon span {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #c5c6c7;
+}
+
+@media (max-width: 768px) {
+  .social-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 26px;
+  }
+
+  .social-icon span {
+    font-size: 12px;
+  }
+}
 
 
 /* --- Blog Section (AI-Powered Content Generation) --- */
