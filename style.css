@@ -1154,6 +1154,7 @@ a:hover {
 
 
 /* --- Resume Section --- */
+
 /* === Resume Section === */
 .resume-section {
   background-color: #0b0c10;
@@ -1175,23 +1176,26 @@ a:hover {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 60px 20px 30px;
+  align-items: center;
+  padding: 60px 0 30px;
   box-sizing: border-box;
 }
 
 .resume-image {
-  width: 80%;
-  max-width: 900px;
+  width: 90%;
+  max-width: 950px;
   height: auto;
-  border-radius: 12px;
+  aspect-ratio: 8.5 / 11; /* Keep A4 ratio */
+  border-radius: 16px;
   border: 2px solid #45a29e;
-  box-shadow: 0 0 30px #45a29e88;
+  box-shadow: 0 0 45px #45a29e88;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
 }
 
 .resume-image:hover {
-  transform: scale(1.01);
-  box-shadow: 0 0 45px #66fcf1aa, 0 0 80px #45a29e88;
+  transform: scale(1.015);
+  box-shadow: 0 0 60px #66fcf1cc, 0 0 120px #45a29eaa;
 }
 
 /* === Download Button === */
@@ -1203,21 +1207,34 @@ a:hover {
 .glow-button {
   background-color: #1f2833;
   color: #66fcf1;
-  padding: 14px 30px;
-  font-size: 16px;
-  border-radius: 8px;
+  padding: 16px 36px;
+  font-size: 18px;
+  border-radius: 10px;
   border: 2px solid #45a29e;
   text-decoration: none;
-  font-weight: 500;
-  box-shadow: 0 0 12px #45a29e99;
+  font-weight: 600;
+  box-shadow: 0 0 15px #45a29e99;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .glow-button:hover {
-  box-shadow: 0 0 20px #66fcf1cc, 0 0 40px #66fcf1cc;
+  box-shadow: 0 0 30px #66fcf1cc, 0 0 60px #66fcf1cc;
   background-color: #0b0c10;
   color: #ffffff;
+}
+
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+  .resume-image {
+    width: 95%;
+    border-radius: 12px;
+  }
+
+  .glow-button {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
 }
 
 /* === Certificates Section === */
