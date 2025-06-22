@@ -505,60 +505,37 @@
             11. Contact Section: How clients can reach you
             ====================================================================
         -->
-        <section id="contact" class="contact-section section-padding" aria-labelledby="contact-title">
-            <div class="container contact-content">
-                <div class="contact-form-container animate-on-scroll">
-                    <h2 class="section-title" id="contact-title">[Contact Section Title, e.g., "Let’s Connect & Collaborate"]</h2>
-                    <p class="form-intro-text">[Contact Form Intro Text, e.g., "Have a challenging project in mind? A question about my work or services?"]</p>
-                    <form id="contact-form" class="contact-form" novalidate aria-label="Contact form for project inquiries">
-                        <div class="form-group">
-                            <label for="name" class="visually-hidden">Your Full Name:</label>
-                            <input type="text" id="name" name="name" placeholder="Your Full Name" required aria-required="true">
-                            <div class="error-message" id="name-error" aria-live="polite"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="visually-hidden">Your Email Address:</label>
-                            <input type="email" id="email" name="email" placeholder="Your Email Address" required aria-required="true">
-                            <div class="error-message" id="email-error" aria-live="polite"></div>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject" class="visually-hidden">Subject of your Message:</label>
-                            <input type="text" id="subject" name="subject" placeholder="Subject (e.g., Project Inquiry, Collaboration)" aria-label="Subject of your message">
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="visually-hidden">Your Message:</label>
-                            <textarea id="message" name="message" rows="7" placeholder="Write your message here..." required aria-required="true"></textarea>
-                            <div class="error-message" id="message-error" aria-live="polite"></div>
-                        </div>
-                        <button type="submit" class="btn btn-primary glow-effect">Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i></button>
-                        <div id="form-submission-message" class="form-submission-message" aria-live="polite" role="status"></div>
-                    </form>
-                </div>
-                <div class="contact-info-socials-wrapper animate-on-scroll">
-                    <div class="contact-info">
-                        <h3>[Contact Details Subheading, e.g., "Direct Contact:"]</h3>
-                        <ul>
-                            <li><i class="fas fa-envelope icon" aria-hidden="true"></i> Email: <a href="mailto:your.email@example.com" aria-label="Send email to Arihant Jain">your.email@example.com</a></li> <!-- IMPORTANT: Replace with your actual email -->
-                            <li><i class="fas fa-phone-alt icon" aria-hidden="true"></i> Phone: <a href="tel:+911234567890" aria-label="Call Arihant Jain">+91 123-456-7890</a></li> <!-- IMPORTANT: Replace with your actual phone number -->
-                            <li><i class="fas fa-map-marker-alt icon" aria-hidden="true"></i> Location: [Your Location, e.g., "India"]</li>
-                        </ul>
-                    </div>
-                    <div class="contact-socials">
-                        <h3>[Social Media Subheading, e.g., "Connect with Me:"]</h3>
-                        <div class="social-icons" role="group" aria-label="Social Media Links">
-                            <a href="https://github.com/Arihant-jainn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fab fa-github social-icon-hover" aria-hidden="true"></i></a>
-                            <a href="https://linkedin.com/in/arihantjain" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in social-icon-hover" aria-hidden="true"></i></a> <!-- IMPORTANT: Replace with your LinkedIn profile -->
-                            <a href="mailto:your.email@example.com" aria-label="Send an Email"><i class="fas fa-envelope social-icon-hover" aria-hidden="true"></i></a> <!-- IMPORTANT: Replace with your actual email -->
-                            <a href="https://twitter.com/your-twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile"><i class="fab fa-twitter social-icon-hover" aria-hidden="true"></i></a> <!-- IMPORTANT: Replace with your Twitter handle if applicable -->
-                            <a href="https://www.behance.net/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Behance Profile"><i class="fab fa-behance social-icon-hover" aria-hidden="true"></i></a> <!-- IMPORTANT: Replace with your Behance profile if applicable -->
-                            <a href="https://dribbble.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Dribbble Profile"><i class="fab fa-dribbble social-icon-hover" aria-hidden="true"></i></a> <!-- IMPORTANT: Replace with your Dribbble profile if applicable -->
-                            <a href="https://medium.com/@yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Medium Profile"><i class="fab fa-medium social-icon-hover" aria-hidden="true"></i></a> <!-- IMPORTANT: Replace with your Medium profile if applicable -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+  <section id="contact" class="contact-section">
+  <div class="contact-container">
+    <h2 class="section-title">Get In Touch</h2>
+
+    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+      <!-- Optional: disable captcha & set redirect -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+
+      <div class="form-group">
+        <input type="text" name="subject" placeholder="Subject" required>
+      </div>
+
+      <div class="form-group">
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="glow-button">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
 
     <!-- 
         ====================================================================
