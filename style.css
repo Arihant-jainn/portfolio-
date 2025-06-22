@@ -1560,6 +1560,19 @@ a:hover {
 .full {
   grid-column: span 2;
 }
+/* === Ensure cursor is visible in form fields === */
+.contact-form input,
+.contact-form textarea,
+.contact-form button,
+.contact-form select,
+.contact-form label {
+  cursor: text;
+}
+
+.contact-form button,
+.contact-form .glow-button {
+  cursor: pointer;
+}
 
 /* Glowing Button */
 .glow-button {
