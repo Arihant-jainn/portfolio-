@@ -1157,8 +1157,25 @@ a:hover {
 
 /* === Resume Section === */
 /* Resume Section Styling */
+.resume-image {
+  width: 70%;
+  max-width: 750px;
+  height: auto;
+  aspect-ratio: 8.5 / 11; /* A4 portrait ratio */
+  border-radius: 12px;
+  border: 2px solid #45a29e;
+  box-shadow: 0 0 30px #45a29e66;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-image:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 45px #66fcf1aa, 0 0 80px #45a29e88;
+}
 .resume-section {
-  background-color: #0b0c10;
+  background-col+
+   or: #0b0c10;
   padding: 80px 0;
   color: #fff;
   font-family: 'Poppins', sans-serif;
