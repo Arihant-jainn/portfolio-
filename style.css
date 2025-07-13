@@ -54,6 +54,18 @@ html.dark {
 
 /* --- Base Body Styles --- */
 body {
+   
+  background-image: url('assets/bg-texture.jpg');  /* ✅ your texture path */
+  background-repeat: repeat;                       /* repeat like a pattern */
+  background-size: auto;                           /* keeps the original size */
+  background-attachment: fixed;                    /* stays fixed when scrolling */
+  background-color: #0d0d0d;                       /* fallback color (optional) */
+  color: white;                                     /* optional: for dark backgrounds */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+
+
     font-family: 'Inter', sans-serif;
     background-color: var(--color-background); /* Uses the new consistent background variable */
     color: var(--color-text-light); /* Uses the new consistent text color variable */
