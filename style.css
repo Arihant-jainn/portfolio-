@@ -602,16 +602,7 @@ a:hover {
 
 
 /* --- About Section Specific Styles --- */
-.slide-in-image {
-  opacity: 0;
-  transform: translateX(-100px); /* comes from left */
-  transition: all 1s ease-out;
-}
 
-.slide-in-image.animate {
-  opacity: 1;
-  transform: translateX(0);
-}
 
 /* --- SECTION: About Me --- */
 .about-section {
