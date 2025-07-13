@@ -578,13 +578,15 @@
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // optional: remove if you want re-trigger
+      } else {
+        entry.target.classList.remove('visible'); // 👈 remove when out of view
       }
     });
   }, { threshold: 0.2 });
 
   document.querySelectorAll('.slide-in').forEach(el => observer.observe(el));
 </script>
+
 
 
 </body>
