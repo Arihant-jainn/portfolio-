@@ -55,7 +55,7 @@ html.dark {
 /* --- Base Body Styles --- */
 body {
    
-  background-image: url('assets/bg-texture.jpg');  /* ✅ your texture path */
+  background-image: url('assets/vecteezy_colorful-cosmic-cloud-formation-illuminated-by-distant_51700889.jpeg);  /* ✅ your texture path */
   background-repeat: repeat;                       /* repeat like a pattern */
   background-size: auto;                           /* keeps the original size */
   background-attachment: fixed;                    /* stays fixed when scrolling */
