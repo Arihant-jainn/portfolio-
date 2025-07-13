@@ -484,15 +484,21 @@ a:hover {
 
 /* --- Hero Section --- */
 .hero-section {
-  background-image: url('assets/background.jpg'); /* ✅ path to your image */
-  background-size: cover;        /* make it cover the full area */
-  background-position: center;   /* center the image */
-  background-repeat: no-repeat;  /* don't repeat */
-  height: 100vh;                 /* full screen height */
   position: relative;
-  z-index: 1;
+  height: 100vh;
   overflow: hidden;
 }
+
+.background-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* 🔥 make sure the video covers the area */
+  z-index: -1;           /* 🔙 place behind all content */
+  pointer-events: none;  /* 🚫 disable mouse interaction */
+}
+
 
 .hero-section {
     min-height: 100vh;
