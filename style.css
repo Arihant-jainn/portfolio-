@@ -484,6 +484,17 @@ a:hover {
 
 /* --- Hero Section --- */
 .hero-section {
+  background-image: url('assets/background.jpg'); /* ✅ path to your image */
+  background-size: cover;        /* make it cover the full area */
+  background-position: center;   /* center the image */
+  background-repeat: no-repeat;  /* don't repeat */
+  height: 100vh;                 /* full screen height */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
