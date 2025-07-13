@@ -43,6 +43,8 @@
     
     <!-- Custom Global Stylesheet: All your custom CSS will go here -->
   <link rel="stylesheet" href="./style.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
     <!-- 
@@ -160,29 +162,30 @@
             5. Services Section: What you offer to clients
             ====================================================================
         -->
-      <section id="services" class="services-section">
-  <h2 class="section-title">My Services</h2>
+    <section id="services" class="services-section">
+  <h2 class="section-title" data-aos="fade-in">My Services</h2>
+  
   <div class="services-container">
-    
-    <div class="service-card" onclick="rippleEffect(this)">
+
+    <div class="service-card" onclick="rippleEffect(this)" data-aos="fade-up" data-aos-delay="100">
       <div class="icon">🎨</div>
       <h3>UI/UX Design</h3>
       <p>Modern interfaces, user journeys, wireframes, and prototypes using Figma & Adobe XD.</p>
     </div>
 
-    <div class="service-card" onclick="rippleEffect(this)">
+    <div class="service-card" onclick="rippleEffect(this)" data-aos="fade-up" data-aos-delay="200">
       <div class="icon">💻</div>
       <h3>Web Development</h3>
       <p>Responsive, dynamic websites using HTML, CSS, JavaScript, and React with full optimization.</p>
     </div>
 
-    <div class="service-card" onclick="rippleEffect(this)">
+    <div class="service-card" onclick="rippleEffect(this)" data-aos="fade-up" data-aos-delay="300">
       <div class="icon">🧠</div>
       <h3>Backend Integration</h3>
       <p>Build scalable backend APIs using Node.js, Express, and REST architecture with JWT auth.</p>
     </div>
 
-    <div class="service-card" onclick="rippleEffect(this)">
+    <div class="service-card" onclick="rippleEffect(this)" data-aos="fade-up" data-aos-delay="400">
       <div class="icon">🗄️</div>
       <h3>API & Databases</h3>
       <p>Powerful data operations using MongoDB, Firebase, MySQL & secure external APIs.</p>
@@ -190,6 +193,7 @@
 
   </div>
 </section>
+
 
         <!-- 
             ====================================================================
@@ -571,6 +575,14 @@
     </footer>
 
     <script src="script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,  // animation speed
+    once: true      // animation happens only once when you scroll to it
+  });
+</script>
+
 
 </body>
 </html>
