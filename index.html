@@ -573,6 +573,18 @@
     once: false     // animation happens only once when you scroll to it
   });
 </script>
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // optional: remove if you want re-trigger
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.slide-in').forEach(el => observer.observe(el));
+</script>
 
 
 </body>
