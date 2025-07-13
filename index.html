@@ -479,6 +479,13 @@
     </div>
   </div>
 </section>
+        <section id="github" class="github-section">
+  <h2 class="section-title slide-in direction-top">GitHub Contributions</h2>
+  <div class="glow-container slide-in direction-bottom">
+    <div class="calendar">Loading GitHub Contribution Graph...</div>
+  </div>
+</section>
+
 
         <!-- 
             ====================================================================
@@ -587,6 +594,16 @@
   document.querySelectorAll('.slide-in').forEach(el => observer.observe(el));
 </script>
 
+<!-- GitHub Contribution Graph Library -->
+<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+
+<script>
+  GitHubCalendar(".calendar", "Arihant-jainn", {
+    responsive: true,
+    tooltips: true
+  });
+</script>
 
 
 </body>
