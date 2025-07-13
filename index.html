@@ -137,7 +137,7 @@
    <section id="about" class="about-section section-padding" aria-labelledby="about-title">
     <div class="container about-content">
         <div class="about-image-wrapper">
-           <img src="./assets/IMG_2819.PNG" alt="Professional portrait of Arihant Jain, a UI/UX Designer and Full Stack Developer" class="about-photo slide-in-image" />
+             <img src="./assets/IMG_2819.PNG" alt="Professional portrait of Arihant Jain, a UI/UX Designer and Full Stack Developer" class="about-photo" />
 
         </div>
         <div class="about-text-content">
@@ -589,25 +589,7 @@
   document.querySelectorAll('.slide-in').forEach(el => observer.observe(el));
 </script>
 
-<script>
-  const slideImg = document.querySelector('.slide-in-image');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        slideImg.classList.add('animate');
-      } else {
-        slideImg.classList.remove('animate'); // runs every time you scroll back
-      }
-    });
-  }, {
-    threshold: 0.3 // when 30% of image is visible
-  });
-
-  if (slideImg) {
-    observer.observe(slideImg);
-  }
-</script>
 
 
 </body>
