@@ -23,10 +23,10 @@ It’s more than just a portfolio — it’s a **showcase of creativity, design,
 
 ### 🔥 Preview  
 ![Portfolio Screenshot](assets/portfolio_im.png)  
-*(Replace with an actual screenshot or GIF)*  
+
 
 ### 🌍 Live Demo  
-👉 [View the Live Portfolio](https://your-portfolio-link.com)  
+👉 [View the Live Portfolio]([https://your-portfolio-link.com](https://arihant-jainn.github.io/portfolio-/))  
 
 ---
 
