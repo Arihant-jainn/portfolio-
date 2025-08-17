@@ -20,15 +20,7 @@ A modern and responsive personal portfolio website to showcase projects, work ex
 
 ---
 
-## ⚡ Getting Started
 
-```bash
-# Clone the repository
-git clone https://github.com/your-username/portfolio.git
-cd portfolio
 
-# Install dependencies
-npm install
 
-# Run development server
-npm run dev
+
