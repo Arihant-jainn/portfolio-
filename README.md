@@ -22,7 +22,7 @@ It’s more than just a portfolio — it’s a **showcase of creativity, design,
 ## 🖼️ Screens & Demo  
 
 ### 🔥 Preview  
-![Portfolio Screenshot](./preview.png)  
+![Portfolio Screenshot](assets/portfolio_im.png)  
 *(Replace with an actual screenshot or GIF)*  
 
 ### 🌍 Live Demo  
