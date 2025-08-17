@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio Website  
+# 🌐 Portfolio Website  
 
 Welcome to the repository of my **personal portfolio website**!  
 This website is crafted to serve as my **digital identity** — a central place where visitors can explore my journey, projects, and ways to connect with me.  
